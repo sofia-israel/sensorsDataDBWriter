@@ -36,6 +36,10 @@ public class DBWriter {
     		 try {
     			 log.trace("receiveSensorData - OK");
     			 sensorNitrogenDto = mapper.readValue(data, SensorNitrogenDto.class);
+    			 if (sensorNitrogenDto.nitrogen_level_value > 250)
+    			 { // temporary check!!!!!
+    				 log.debug("Alarm!!!!!!");
+    			 }
     		 } catch (Exception e) {
     			 log.debug("receiveSensorData - wrong Data!");
     		 }
