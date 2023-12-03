@@ -40,6 +40,10 @@ public class DBWriter {
     			 { // temporary check!!!!!
     				 log.debug("Alarm!!!!!!");
     			 }
+    			 else
+    			 {
+    				 log.debug("Normal data received");
+    			 }
     		 } catch (Exception e) {
     			 log.debug("receiveSensorData - wrong Data!");
     		 }
